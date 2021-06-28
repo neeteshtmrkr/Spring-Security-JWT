@@ -4,15 +4,17 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+@Service
 public class JwtUtil {
 
-    private String SECRET_KEY="#$caad01d42df626e0fc509772%n#7990086a290e%$&!p%a*e9e7d2017110210bf6ac8!5@2$1l";
+    final String SECRET_KEY="nepal123";
 
     public String extractUsername(String token){
         return extractClaim(token, Claims::getSubject);
